@@ -31,6 +31,10 @@ body{
     color: #ffffff;
     opacity: 0.6;
 }
+.blog-nav .button:focus{
+    outline: none;
+    background-color: transparent;
+}
 .blog-nav .button:hover{
     color: #ffffff;
     opacity: 1;
