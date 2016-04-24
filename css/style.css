@@ -20,6 +20,7 @@ body{
 .bar .button.blogger.icon:before{
     font-size: 24px;
 }
+.blogger:hover,
 .bar .button.blogger:hover,
 .bar button.blogger:hover{
     color: #39ceff;
