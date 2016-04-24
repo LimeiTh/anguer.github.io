@@ -1,52 +1,80 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="css/style.css" rel="stylesheet" type="text/css">
 
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="css/github-light.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="css/print.css" media="print">
-
-    <script src="lib/angular/angular.min.js"></script>
+    <!--<script src="lib/angular/angular.min.js"></script>-->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/angular-ui-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="lib/angular-ui-bootstrap/ui-bootstrap.js"></script>
 
 
     <title>Anguer个人博客</title>
-  </head>
+</head>
 
-  <body ng-app="myApp" ng-controller="MainController">
-    <header>
-      <div class="inner">
-        <h1>Anguer</h1>
-        <h2>个人博客</h2>
-        <a href="https://github.com/anguer" class="button"><small>Follow me on</small> GitHub</a>
-      </div>
-    </header>
+<body ng-app="myApp">
+<nav class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div ng-controller="NavController" class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" ng-click="isCollapsed = !isCollapsed">
+                <span class="sr-only">Toggle Nav</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="btn blogger">Anguer</a>
+        </div>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-
-        </section>
-
-        <aside id="sidebar">
-          <label ng-bind="myName"></label>
-        </aside>
-      </div>
+        <div uib-collapse="isCollapsed" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a class="btn">我的博客</a></li>
+                <li><a class="btn">个人中心</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://github.com/anguer" target="_blank" class="btn icon ion-social-github my-github" style="font-size: 28px;padding: 0;line-height:50px;width: 2em;" title="Follow me on GitHub"></a></li>
+            </ul>
+        </div>
     </div>
+</nav>
 
-  
-  </body>
+<!--<ion-header-bar class="bar bar-header">
+    <div class="container">
+        <p class="">
+            <button class="button button-light icon-left icon ion-social-github blogger">Anguer</button>
+        </p>
+    </div>
+</ion-header-bar>-->
+<div class="container">
+    <div class="row" ng-repeat="i in [1,2,3,4,5,6,7,8]">
+        <div class="col-sm-6 col-md-4" ng-repeat="i in [1,2,3]">
+            <div class="thumbnail">
+                <img src="img/zhaoliying.jpg" alt="...">
+                <div class="caption">
+                    <h3>Hello,World!</h3>
+                    <p></p>
+                    <p><a href="#" class="btn btn-primary" role="button">查看</a> <a href="#" class="btn btn-default" role="button">分享</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
 
 <script>
-  angular.module('myApp',[])
-          .controller('MainController',function($scope){
-            $scope.myName = "Anguer";
-          })
-  ;
+    angular.module('myApp', ['ionic','ui.bootstrap'])
+            .controller('MainController', function ($scope) {
+                $scope.myName = "Anguer";
+            })
+            .controller('NavController', function ($scope) {
+                $scope.isCollapsed = false;
+            })
+    ;
 </script>
 </html>
