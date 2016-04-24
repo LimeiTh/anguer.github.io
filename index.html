@@ -24,7 +24,7 @@
 </head>
 
 <body ng-app="blog">
-<nav class="navbar navbar-inverse navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top navbar-opacity"><!--navbar-inverse-->
     <div class="container" ng-controller="NavController">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -34,19 +34,25 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand">Anguer</a>
+            <a class="btn navbar-brand">Anguer</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div uib-collapse="isCollapsed" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a class="btn">个人中心</a></li>
-                <li><a class="">我的文章</a></li>
+                <li><a class="btn">我的文章</a></li>
             </ul>
-            <!--<ul class="nav navbar-nav navbar-right">
-                <li><a class="">登录</a></li>
-                <li><a class="">注册</a></li>
-            </ul>-->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="btn">
+                        <span class="glyphicon glyphicon-user"></span>User
+                    </a>
+                    <!--<button type="button" class="btn btn-default navbar-btn">
+                        <span class="glyphicon glyphicon-user"></span> User
+                    </button>-->
+                </li>
+            </ul>
         </div>
     </div>
 </nav>

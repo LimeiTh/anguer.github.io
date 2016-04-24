@@ -1,8 +1,27 @@
 <div ng-controller="MainController">
-    <div class="container">
-        Hello,World!我是主页<br>
 
-        <button class="btn btn-primary" ng-click="openNewPage()">打开新页面</button>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Hello, world!</h1>
+            <p>I'm Anguer!</p>
+            <p><a class="btn btn-primary btn-lg" ng-click="openNewPage()">Learn more</a></p>
+        </div>
     </div>
+
+    <div class="container">
+        <div class="row" ng-repeat="i in [1,2,3]">
+            <div class="col-sm-6 col-md-4" ng-repeat="j in [1,2,3]">
+                <div class="thumbnail">
+                    <img src="img/zhaoliying.jpg" alt="...">
+                    <div class="caption text-center">
+                        <h3>Thumbnail label</h3>
+                        <p> Bacon ipsum dolor sit amet doner ham leberkas short loin hamburger, flank drumstick corned beef. Doner meatball venison bresaola biltong chicken. Turkey bacon shoulder strip steak spare ribs tri-tip. Rump ground round strip steak kielbasa short loin t-bone. Biltong capicola corned beef, ribeye chuck andouille sausage ham hock turkey spare ribs beef tail sirloin shank.</p>
+                        <p><a href="#" class="btn btn-primary" role="button">查看</a> <a href="#" class="btn btn-default" role="button">分享</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 </div>
