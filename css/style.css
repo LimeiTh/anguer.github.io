@@ -2,30 +2,5 @@
  *  Anguer
  */
 body{
-    /*position: absolute;
-    top:0;
-    bottom:0;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    overflow: auto;*/
-}
-
-.blogger,
-.bar .button.blogger,
-.bar button.blogger{
-    font-family: cursive;
-    font-size: 24px;
-    color: #38B0E0;
-}
-.bar .button.blogger.icon:before{
-    font-size: 24px;
-}
-.blogger:hover,
-.bar .button.blogger:hover,
-.bar button.blogger:hover{
-    color: #39ceff;
-}
-.button.button-light.active,
-.button.button-light.activated{
-    background-color: transparent;
+    padding-top: 4em;
 }
