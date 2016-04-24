@@ -2,19 +2,55 @@
  *  Anguer
  */
 body{
-    /*padding-top: 4em;*/
+
 }
-a{
+.skin{
+    background-color: rgb(255, 255, 255);
+    background-image: url("../img/bg.jpg");
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    min-width: 1000px;
+    z-index: -10;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    zoom: 1;
+}
+.blog-nav .button.blogger{
+    font-size: 24px;
+    font-family: cursive;
+}
+.blog-nav .button{
     cursor: pointer;
+    color: #ffffff;
+    opacity: 0.6;
+}
+.blog-nav .button:hover{
+    color: #ffffff;
+    opacity: 1;
+    background-color: transparent;
+}
+.blog-nav .navbar-toggle{
+    border-color: #ffffff;
+}
+.blog-nav .navbar-toggle .icon-bar{
+    background-color: #ffffff;
 }
 .navbar-opacity{
     /*opacity: 0.7;*/
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(82,63,69,0.8);
 }
 .blogger ,
 .navbar .blogger{
-    font-size: 24px;
-    font-family: cursive;
-    color: midnightblue;
+
+}
+.color-white{
+    color: white;
 }
 
